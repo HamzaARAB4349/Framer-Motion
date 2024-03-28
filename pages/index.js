@@ -1,14 +1,14 @@
 
 import BasicsOfMotion from "../components/BasicsOfMotion";
-
+import Gestures from "../components/Gestures";
 
 
 
 export default function Home() {
   return (
     <div>
-      <BasicsOfMotion />
-      {/* <Gestures /> */}
+      {/* <BasicsOfMotion /> */}
+      <Gestures />
       {/* <AnimationControls /> */}
       {/* <ViewBasedAnimations /> */}
       {/* <ScrollAnimations /> */}
