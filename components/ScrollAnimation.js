@@ -2,9 +2,9 @@ import { useScroll, motion, useSpring, useTransform } from "framer-motion";
 import React from "react";
 
 const ScrollAnimations = () => {
-  const { scrollYProgress } = useScroll();
-
-  const scaleX = useSpring(scrollYProgress);
+  
+  const {scrollYProgress} = useScroll()
+  const scaleX = useSpring(scrollYProgress)
 
   const background = useTransform(
     scrollYProgress,
@@ -12,22 +12,13 @@ const ScrollAnimations = () => {
     ["rgb(86, 1, 245)", "rgb(1, 245, 13)"]
   );
 
+
   return (
     <div>
-      <motion.div
-        style={{
-          // scaleX: scrollYProgress,
-          scaleX,
-          transformOrigin: "left",
-          // background: "blue",
-          background,
-          position: "sticky",
-          top: 0,
-          width: "100%",
-          height: "20px",
-        }}
+      
+      <motion.div 
+        style={{scaleX, top:0, width:"100%", height:"20px", position:"sticky", transformOrigin:"left", background}}
       />
-
       <div
         style={{
           maxWidth: "700px",
